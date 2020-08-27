@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>箱鯖情報室</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <!-- アイコンフォントの利用方法 http://fortawesome.github.io/Font-Awesome/ -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+        
+    </style>
+    <script>
+        // 画面上部にスクロールするボタン
+        $(function() {
+            var pageTop = $('.btn-pagetop');
+            pageTop.hide();
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 600) {
+                    pageTop.fadeIn();
+                } else {
+                    pageTop.fadeOut();
+                }
+            });
+            pageTop.click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500, 'swing');
+                pageTop.blur();
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body id="top">
+    <div id="head">
+    <p id="membercount">サーバー人数:0000</p>
+    <h1>箱鯖情報室</h1>
+    </div>
+    <div class="nav">
+        <ul class="nav-group">
+            <li><a onclick="$('#Overview').slideToggle();$('#Precautions').fadeOut();$('#Info').fadeOut();">サーバー概要</a></li>
+            <li><a onclick="$('#Precautions').slideToggle();">注意事項</a></li><br>
+            <li><a onclick="$('#Info').slideToggle();">サーバー総合窓口</a></li>
+            <li><a onclick="$('#Talk').slideToggle();">ふれあいの里</a></li>
+            <li><a onclick="$('#Planning').slideToggle();">企画・コラボ放送用</a></li>
+            <li><a onclick="$('#Liver').slideToggle();">各ライバーのch</a></li>
+            <li><a onclick="$('#Play').slideToggle();">リスナーの遊び場</a></li>
+            <li><a onclick="$('#Game').slideToggle();">リスナーゲーム部</a></li>
+            <li><a onclick="$('#Cemetery').slideToggle();">墓地</a></li>
+        </ul>
+    </div>
+    <hr>
+    <!--サーバー概要-->
+    <div id="Overview" class="displayarea">
+        <strong><u>”お互いがお互いに楽しいと思える場所をモットーに”</u></strong><br>
+        このサーバーはホロライブをより盛り上げ、リスナー同士の推し活動をより活性化させるのを目的として作りました。<br>
+        このサーバーを利用するにあたり、幾つか守っていただきたいルールがありますので、どうか一度お目通しいただきますようお願いします。
+    </div>
+    <!--注意事項-->
+    <div id="Precautions" class="displayarea">
+        <p>【基本的なチャットエチケットを遵守】<br>
+        # 公序良俗、及び各種法令に反する言動を行わないこと。<br>
+        # 広告目的、マルチポスト、スパム、人種差別、ヘイトスピーチ、誹謗中傷等の行為はしないこと。<br>
+        # 政治、宗教に関連する議論は避けること。<br>
+        # いかなる場合でも罵り合いはしないこと。<br>
+        # Vtuberの活動についての個人的見解や噂等の不確定情報の話題は避けること。情報は公式発表がされない場合広げないこと。
+        # 権利問題について、事実以上の話しの拡大・拡散を避けること。また公式発表がされていない話題についての会話については禁止とする。<br>
+        # Vtuberの実生活、住所、その他プライベートに関する話題の投稿をしないこと。※公開されている情報に関しては問題ありません。<br>
+        ※一部チャンネルにおいては以上のルールから逸脱する場合があります。該当チャンネルは別途認証が必要になりますので改めて確認をお願いします。</p>
+        
+        <p>【著作物について】<br>
+        # サーバー内の画像、および創作物について、本人の許可なくSNS等へアップロードしないこと。<br>
+        # Twitterやその他SNS等のコンテンツは、可能な限り引用元を明示して投稿すること。<br>
+        # ”海賊版”や有料チャンネルのコンテンツを共有しないこと。（メンバー限定コンテンツ・楽曲・動画等）</p>
+        
+        <p>【R18指定のコンテンツについて】<br>
+        # サーバー内には未成年もいるため、R18指定とされるもの、またその可能性があるものの投稿、発言は控えて下さい。</p>
+        
+        <p>【その他】<br>
+        # 配信者から特定の指示や禁止事項等が示されている場合、そちらを最優先でお願いします。<br>
+        # 緊急でサーバー運営へ問い合わせがある場合 <strong>@最高地裁</strong> のメンションを付けて #運営への意見・質問箱 へ投稿して下さい。<br>
+        # サーバー内でのグッズ・チケットの転売を禁止します。<br>
+        # 別のDiscordサーバーへのリンクを貼る場合、一度 @葉月おじ に連絡をよろしくお願いします。</p>
+        
+        <p>上記ルールに関して、文面以上の強制力はありません。<br>
+        参加しているホロリスナー全員が楽しめるサーバー運営のため、ご協力いただけますと幸いです。<br><br>
+        なお上記ルール以外にもサーバー管理者が不適切だと判断した場合、警告をさせていただく場合がございます。<br>
+        警告に対して改善が見られない、反応がない場合追放またはBANなどの処置を取る場合があります。ご了承ください。<br>
+        また、本サーバーのご利用は自己責任でお願い致します。<br>
+        本サーバーを利用したことにより生じた損害等は一切保障致しかねます。</p>
+        
+    </div>
+    <!--サーバー総合窓口-->
+    <div id="Info" class="displayarea">
+        <p>【サーバー受付窓口】<br>
+            #総合窓口<br>
+            　初めの挨拶を行う場所【任意】<br>
+            #【概要】ご利用の前に<br>
+            　このサーバーについての説明（時折更新されます）<br>
+            #告知ch<br>
+            　サーバー内で告知することがあった際に投稿されます（サーバー主しか書き込み不可）<br>
+            #気が向いた時の自己紹介ch<br>
+            　自己紹介のみを貼る場所（会話:x: ）<br>
+            #コラボ誘導ch<br>
+            　その日のコラボ配信での会話用チャンネル先の誘導です。<br>
+            #運営への意見・質問箱<br>
+            　サーバーについての質問、意見、問い合わせ等御座いましたら此方へよろしくお願いします。<br>
+            　他にも誰かの意見を聞きたいときなども、こちらに投稿してください。<br>
+            #ファンロール取得所<br>
+            　自分の推しをDiscordプロフィールに加えることが出来ます（詳細はチャンネルにて）<br>
+            #ch開放用ロール取得所<br>
+            　このサーバーの一部伏せられているチャンネルを閲覧するのに必要なロールを取得したりする場所です。詳しくはチャンネル内の説明にて。</p>
+    </div>
+    <!--ふれあいの里-->
+    <div id="Talk" class="displayarea">
+        <p>#hololive専用雑談ch<br>
+            ホロライブに関する話題を気軽にお話する場所<br>
+            　:o: 慣れてない方にオススメ:o:<br>
+            #★ざつだんch1★<br>
+            　リスナー同士の何気ない会話を<br>
+            #★ざつだんch2★<br>
+            　ch1が盛り上がっている場合の避難所<br>
+            #他所のvtuber用雑談ch<br>
+            　:warning: 他のVtuber関係の話題は全てここでお願いいたします！<br>
+            #オフイベ用ch<br>
+            　ホロライブのオフイベント時の情報交換に使って下さい。<br>
+            #リスナーオフ会用ch<br>
+            　リスナー同士でのオフ会の打ち合わせ、待ち合わせ等にお使い下さい。</p>
+    </div>
+    <!--企画・コラボ-->
+    <div id="Planning" class="displayarea">
+        <p>複数のライバーによるコラボ配信等があった場合、会話先として此方のチャンネルへ誘導します。</p>
+    </div>
+    <!--各ライバーのch-->
+    <div id="Liver" class="displayarea">
+        <p>配信のコメント・感想・個別のファンアート等は此方にてよろしくお願いします！<br>
+            　配信外でも、ライバー個人についての話題であれば自由に会話して下さい！</p>
+    </div>
+    <!--リスナーの遊び場-->
+    <div id="Play" class="displayarea">
+        <p>#mmdのお部屋<br>
+            　MMD作成に関する話題は此方へ<br>
+            #創作物【ホロ関連】<br>
+            　自作イラスト・制作物等の投稿、相談等は此方でお願いします！<br>
+            #創作物【その他】<br>
+            　ホロライブ外の自作創作物等の投稿は此方へ！<br>
+            #ホロライブ写真館📷<br>
+            　リアルイベント等で撮った写真は此方へ投稿お願いします！<br>
+
+            #うちわの島（慣れた人向け） （:warning:閲覧にはレベル15が必要）<br>
+            　知り合い同士の絡み、初見の方には分かりづらいノリ等の会話はこちらの部屋をお使い下さい。<br>
+            #❓質問部屋❓<br>
+            　技術的なお話（プログラミング・ソフトウェア等）やPCパーツ・デバイスに関しての話題は此方でよろしくお願いします！<br>
+            #レベル確認・通知<br>
+            　このサーバーに導入されているレベルシステム専用の場所。コマンドを使用することで、現在のレベルを確認することが出来ます。:warning: 発言間隔を制限しており、一度発言すると30分間次の発言は出来ません。<br>
+            　　コマンド例）<br>
+            　　　　!rank = 現在の自分のレベルを確認<br>
+            　　　　!levels=サーバー参加者全体のレベルの確認</p>
+    </div>
+    <!--リスナーゲーム部-->
+    <div id="Game" class="displayarea">
+        <p>特定のゲームに関する話題はこちらで<br>
+           ＊入場には #ch開放用ロール取得所 でロールを取得する必要があります。<br>
+            #据置・pcゲー総合<br>
+            　専用チャンネルが無いゲームの話題はこちらで。<br>
+        </p>
+    </div>
+    <!--墓地-->
+    <div id="Cemetery" class="displayarea">
+        <p>#無料案内所<br>
+            　詳しくは部屋の中の説明書きを読んで下さい。</p>
+    </div>
+</body>
+</html>
